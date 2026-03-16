@@ -48,15 +48,35 @@
 		border-top: 1px solid var(--line);
 		margin: 28px 0;
 	}
-	.lead {
+	.manifesto {
+		margin: 14px 0 22px;
+		padding: 14px 16px;
+		border-left: 3px solid #d9d9d9;
+		background: #fafafa;
+	}
+	.manifesto-item { margin: 0 0 14px; }
+	.manifesto-item:last-child { margin-bottom: 0; }
+	.en {
+		font-family: Charter, "Iowan Old Style", "Times New Roman", Georgia, serif;
+		font-size: 18px;
+		line-height: 1.6;
+		color: #1d1d1d;
+		margin: 0 0 4px;
+	}
+	.zh {
+		font-size: 14px;
+		line-height: 1.8;
 		color: var(--muted);
-		margin-bottom: 10px;
+		margin: 0;
 	}
 	@media (max-width: 640px) {
 		body { padding: 14px 12px 28px; font-size: 15px; }
 		h3 { font-size: 20px; margin-top: 24px; }
 		.profile-pic { width: 96px; height: 96px; }
 		ul { padding-left: 18px; }
+		.manifesto { padding: 12px 12px; }
+		.en { font-size: 17px; }
+		.zh { font-size: 13px; }
 	}
 	</style>
 </head>
@@ -66,17 +86,24 @@
 
 <hr />
 
-<p class="lead">Everyone should learn to tell the difference between good and bad, and between easy and difficult.<br/>
-每个人都应该学会分辨好与坏、易与难。</p>
-
-<p class="lead">It is ridiculous, that capability, pressure, hard working, and luckiness are sometimes misunderstood as the same thing by most people.<br/>
-非常可笑，能力、压力、努力、幸运，有的时候大家竟然会误以为是同一种东西。</p>
-
-<p class="lead">I dislike, and sometimes look down upon, those full of (random) ideas, but fail to appreciate the difficulties behind real implementations.<br/>
-我不喜欢，有时甚至是瞧不起，那些总是有很多想法，但却不懂得欣赏工程实现背后的复杂性的人。</p>
-
-<p class="lead">By "design and implement", I mean, to think, to plan, to arrange, to actually write code, to test, to deploy, and to debug.<br/>
-当我说“设计并实现”的时候，我指的是想，计划，编排，并且真实的写代码，测试，部署，调试</p>
+<div class="manifesto">
+	<div class="manifesto-item">
+		<p class="en">Everyone should learn to tell the difference between good and bad, and between easy and difficult.</p>
+		<p class="zh">每个人都应该学会分辨好与坏、易与难。</p>
+	</div>
+	<div class="manifesto-item">
+		<p class="en">It's absurd how often people confuse capability, pressure, hard work, and luck as if they were the same thing.</p>
+		<p class="zh">非常可笑，能力、压力、努力、幸运，有的时候大家竟然会误以为是同一种东西。</p>
+	</div>
+	<div class="manifesto-item">
+		<p class="en">I dislike—and sometimes look down upon—those who are full of ideas yet fail to appreciate the difficulty of real implementation.</p>
+		<p class="zh">我不喜欢，有时甚至瞧不起，那些总是有很多想法，却不懂得欣赏工程实现背后复杂性的人。</p>
+	</div>
+	<div class="manifesto-item">
+		<p class="en">By “design and implement,” I mean thinking, planning, architecting, coding, testing, deploying, and debugging.</p>
+		<p class="zh">当我说“设计并实现”，我指的是思考、规划、架构、编码、测试、部署和调试。</p>
+	</div>
+</div>
 
 <h3><strong>About</strong></a></h3>
 <ul>
