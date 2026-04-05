@@ -1,33 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href="../tangkk.ico" rel="icon" type="image/x-icon" />
-	<title>tangkk | net</title>
-	<style>
-	html *
-	{
-	font-size: 1em !important;
-	color: #000 !important;
-	font-family: Courier !important;
-	line-height: 25px;
-	width: 800px;
-  	margin: auto;
-	}
-	</style>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="../tangkk.ico" rel="icon" type="image/x-icon" />
+  <title>tangkk | 头像的意思</title>
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #667085;
+      --line: #e7e7e7;
+      --link: #0b57d0;
+      --quote-bg: #fafafa;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      color: var(--fg);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .topnav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .article-header {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .title {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .dek {
+      margin: 12px 0 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .article {
+      max-width: 760px;
+      font-size: 18px;
+      word-break: break-word;
+    }
+    .article p {
+      margin: 0 0 18px;
+    }
+    .lead {
+      padding: 14px 16px;
+      border-left: 3px solid #d9d9d9;
+      background: var(--quote-bg);
+      color: #222;
+    }
+    .footer-nav {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 15px;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      .page { padding: 16px 14px 32px; }
+      .topnav { font-size: 14px; margin-bottom: 14px; }
+      .article-header { margin-bottom: 18px; padding-bottom: 16px; }
+      .avatar { width: 72px; height: 72px; margin-bottom: 14px; }
+      .title { font-size: 26px; }
+      .dek { font-size: 14px; margin-top: 10px; }
+      .article { font-size: 16px; line-height: 1.85; }
+      .article p { margin-bottom: 16px; }
+      .lead { padding: 12px 12px; }
+    }
+  </style>
 </head>
 <body>
-<p><img alt="Mountain View" src="../me.jpg" style="width:150px;height:150px;" /></p>
+  <main class="page">
+    <nav class="topnav">
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+    </nav>
 
-<hr/><br/>
+    <header class="article-header">
+      <img alt="Junqi Deng" src="../me.jpg" class="avatar" />
+      <p class="eyebrow">Essay</p>
+      <h1 class="title">头像的意思</h1>
+      <p class="dek">一个头像，两层意思：计算机音乐，以及我对独处和私人空间的偏好。</p>
+    </header>
 
-<p>
-当时设计这个头像，是希望用它代表我从事的职业“计算机音乐”。右下角的一条直线和一个圆点，代表一个图灵机的磁带头
-下面的竖着的黑白间条，代表写着0和1序列的磁带；上面横着的黑白间条，代表图灵机的状态。所以整个头像其实是一个图灵机（现代计算机的本质都是图灵机）。
-然后黑白间条本身也代表了音乐（虽然这种象征只出现在钢琴上面），因为黑白实际上可以编码音乐里面的所有音符，甚至所有声学特征。
-于是这个头像的第一层意思就是“计算机音乐”（computer music）。
-第二层意思可能更加形象和直接。它是一个被拉下来的百叶窗。表示我暂时不太想见到其他人，我想潜水，想静一静，想有一点私人的空间。
-我是一个喜欢独处的计算机音乐人。
-</p>
+    <article class="article">
+      <p class="lead">当时设计这个头像，不只是想做一个图形，而是想让它同时指向“计算机”和“音乐”。</p>
 
+      <p>右下角的一条直线和一个圆点，代表一个图灵机的磁带头；下面竖着的黑白间条，代表写着 0 和 1 序列的磁带；上面横着的黑白间条，代表图灵机的状态。所以整个头像其实是一个图灵机——而现代计算机的本质，仍然离不开这个模型。</p>
+
+      <p>然后黑白间条本身也代表了音乐。虽然这种象征最直观地只出现在钢琴上，但黑白实际上可以编码音乐里面的所有音符，甚至所有声学特征。于是这个头像的第一层意思，就是“计算机音乐”（computer music）。</p>
+
+      <p>第二层意思可能更加形象和直接。它也像一个被拉下来的百叶窗，表示我暂时不太想见到其他人。我想潜水，想静一静，想有一点私人的空间。</p>
+
+      <p>我是一个喜欢独处的计算机音乐人。</p>
+    </article>
+
+    <footer class="footer-nav">
+      <a href="../blog.html">← Back to blog</a>
+    </footer>
+  </main>
 </body>
 </html>

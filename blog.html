@@ -1,27 +1,207 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href="tangkk.ico" rel="icon" type="image/x-icon" />
-	<title>tangkk | net</title>
-	<style>
-	html *
-	{
-	font-size: 1em !important;
-	color: #000 !important;
-	font-family: Courier !important;
-	line-height: 25px;
-	}
-	</style>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="tangkk.ico" rel="icon" type="image/x-icon" />
+  <title>tangkk | blog</title>
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #667085;
+      --line: #e7e7e7;
+      --line-strong: #d6d6d6;
+      --link: #0b57d0;
+      --bg-soft: #fafafa;
+      --bg-card: #fcfcfc;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      color: var(--fg);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      display: block;
+    }
+    .hero-copy {
+      min-width: 0;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .title {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 560px;
+    }
+    .topnav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0 0 28px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+    .post-item {
+      margin: 0;
+    }
+    .post-link {
+      display: block;
+      padding: 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--bg-card);
+      color: inherit;
+      transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+    }
+    .post-link:hover {
+      background: var(--bg-soft);
+      border-color: var(--line-strong);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .post-title {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--fg);
+    }
+    .post-excerpt {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 640px) {
+      .page { padding: 16px 14px 32px; }
+      .hero {
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+      }
+      .avatar {
+        width: 72px;
+        height: 72px;
+      }
+      .title {
+        font-size: 26px;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .topnav {
+        margin-bottom: 22px;
+        font-size: 14px;
+      }
+      .section-title {
+        font-size: 17px;
+        margin-bottom: 12px;
+      }
+      .post-link {
+        padding: 15px 14px;
+        border-radius: 12px;
+      }
+      .post-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+      .post-excerpt {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-<p><img alt="Mountain View" src="me.jpg" style="width:150px;height:150px;" /></p>
+  <main class="page">
+    <header class="hero">
+      <a href="./index.html"><img alt="Junqi Deng" src="me.jpg" class="avatar" /></a>
+      <div class="hero-copy">
+        <p class="eyebrow">tangkk.github.io</p>
+        <h1 class="title">Blog</h1>
+        <p class="subtitle">旧文、小文章、一些没打算包装成正式项目的写作。先求清楚、耐读、维护省心。</p>
+      </div>
+    </header>
 
-<li>
-<a href="./blog/aboutme.html">头像的意思</a>
-</li>
-<li>
-<a href="./blog/joepass.html">Joe Pass - I can't play any more</a>
-</li>
+    <nav class="topnav">
+      <a href="./index.html">← Home</a>
+    </nav>
 
+    <section>
+      <h2 class="section-title">Posts</h2>
+      <ul class="post-list">
+        <li class="post-item">
+          <a class="post-link" href="./blog/aboutme.html">
+            <h3 class="post-title">头像的意思</h3>
+            <p class="post-excerpt">关于头像设计、图灵机意象，以及“计算机音乐”这件事。</p>
+          </a>
+        </li>
+        <li class="post-item">
+          <a class="post-link" href="./blog/joepass.html">
+            <h3 class="post-title">Joe Pass - I can't play any more</h3>
+            <p class="post-excerpt">一篇关于 Joe Pass、爵士乐、天赋、练习与告别的旧文。</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      简单静态页，手工维护。
+    </footer>
+  </main>
 </body>
 </html>
