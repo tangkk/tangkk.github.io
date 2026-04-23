@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-title" content="tangkk" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="tangkk.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
+  <title>tangkk | web apps</title>
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #667085;
+      --line: #e7e7e7;
+      --line-strong: #d6d6d6;
+      --link: #0b57d0;
+      --bg-soft: #fafafa;
+      --bg-card: #fcfcfc;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      color: var(--fg);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      display: block;
+    }
+    .hero-copy {
+      min-width: 0;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .title {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 620px;
+    }
+    .topnav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0 0 28px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .app-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+    .app-item {
+      margin: 0;
+    }
+    .app-link {
+      display: block;
+      padding: 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--bg-card);
+      color: inherit;
+      transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+    }
+    .app-link:hover {
+      background: var(--bg-soft);
+      border-color: var(--line-strong);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .app-title {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--fg);
+    }
+    .app-url {
+      margin: 0 0 6px;
+      color: var(--link);
+      font-size: 15px;
+      word-break: break-all;
+    }
+    .app-excerpt {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 640px) {
+      .page { padding: 16px 14px 32px; }
+      .hero {
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+      }
+      .avatar {
+        width: 72px;
+        height: 72px;
+      }
+      .title {
+        font-size: 26px;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .topnav {
+        margin-bottom: 22px;
+        font-size: 14px;
+      }
+      .section-title {
+        font-size: 17px;
+        margin-bottom: 12px;
+      }
+      .app-link {
+        padding: 15px 14px;
+        border-radius: 12px;
+      }
+      .app-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+      .app-url,
+      .app-excerpt {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <a href="./index.html"><img alt="Junqi Deng" src="me.jpg" class="avatar" /></a>
+      <div class="hero-copy">
+        <p class="eyebrow">tangkk.github.io</p>
+        <h1 class="title">Web Apps</h1>
+        <p class="subtitle">目前公开放在 tangkk.github.io 上的 web app 链接汇总。</p>
+      </div>
+    </header>
+
+    <nav class="topnav">
+      <a href="./index.html">← Home</a>
+      <a href="./blog.html">Blog</a>
+    </nav>
+
+    <section>
+      <h2 class="section-title">Apps</h2>
+      <ul class="app-list">
+        <li class="app-item">
+          <a class="app-link" href="https://tangkk.github.io/chord-sheet-site/" target="_blank" rel="noopener noreferrer">
+            <h3 class="app-title">Chord Sheet Site</h3>
+            <p class="app-url">https://tangkk.github.io/chord-sheet-site/</p>
+            <p class="app-excerpt">和弦谱浏览与展示站点。</p>
+          </a>
+        </li>
+        <li class="app-item">
+          <a class="app-link" href="https://tangkk.github.io/web-video-trans/" target="_blank" rel="noopener noreferrer">
+            <h3 class="app-title">Web Video Trans</h3>
+            <p class="app-url">https://tangkk.github.io/web-video-trans/</p>
+            <p class="app-excerpt">浏览器里的视频转码 / 处理工具。</p>
+          </a>
+        </li>
+        <li class="app-item">
+          <a class="app-link" href="https://tangkk.github.io/web-justmetronome/" target="_blank" rel="noopener noreferrer">
+            <h3 class="app-title">Web JustMetronome</h3>
+            <p class="app-url">https://tangkk.github.io/web-justmetronome/</p>
+            <p class="app-excerpt">网页版节拍器。</p>
+          </a>
+        </li>
+        <li class="app-item">
+          <a class="app-link" href="https://tangkk.github.io/web-realbook/" target="_blank" rel="noopener noreferrer">
+            <h3 class="app-title">Web Realbook</h3>
+            <p class="app-url">https://tangkk.github.io/web-realbook/</p>
+            <p class="app-excerpt">Real Book 相关的网页工具 / 站点。</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      ------
+    </footer>
+  </main>
+</body>
+</html>
