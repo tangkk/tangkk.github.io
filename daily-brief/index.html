@@ -1,0 +1,56 @@
+---
+layout: null
+title: Daily Brief
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daily Brief: AI, semiconductors, financial markets, world news, China and science.">
+  <link rel="alternate" type="application/rss+xml" title="tangkk Daily Brief" href="/daily-brief/feed.xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Daily Brief | tangkk</title>
+  <style>
+    :root { --fg:#111; --muted:#667085; --line:#e7e7e7; --line2:#d6d6d6; --link:#0b57d0; --soft:#fafafa; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--fg); background:#fff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; font-size:16px; line-height:1.7; }
+    a { color:var(--link); text-decoration:none; } a:hover { text-decoration:underline; }
+    .page { max-width:900px; margin:0 auto; padding:30px 18px 56px; }
+    .hero { padding-bottom:24px; border-bottom:1px solid var(--line); margin-bottom:24px; }
+    .eyebrow { margin:0 0 7px; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0; font-size:36px; line-height:1.15; letter-spacing:-.025em; }
+    .subtitle { margin:12px 0 0; max-width:680px; color:var(--muted); font-size:15px; }
+    .nav { display:flex; gap:16px; flex-wrap:wrap; font-size:14px; margin-bottom:28px; }
+    .posts { list-style:none; margin:0; padding:0; display:grid; gap:12px; }
+    .post { display:block; padding:17px 18px; border:1px solid var(--line); border-radius:13px; color:inherit; background:#fff; }
+    .post:hover { text-decoration:none; border-color:var(--line2); background:var(--soft); }
+    .post-date { display:block; color:var(--muted); font-size:13px; margin-bottom:4px; }
+    .post-title { display:block; font-weight:650; font-size:19px; }
+    .empty { color:var(--muted); padding:18px 0; }
+    .footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:640px) { .page{padding:20px 14px 40px;} h1{font-size:30px;} }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">tangkk.github.io</p>
+      <h1>Daily Brief</h1>
+      <p class="subtitle">AI & LLMs, semiconductors, financial markets, world news, China and science — with macro dashboards and signal-vs-noise analysis.</p>
+    </header>
+    <nav class="nav"><a href="/">← Home</a><a href="/blog.html">Blog</a><a href="/daily-brief/feed.xml">RSS feed</a></nav>
+    <section>
+      <ul class="posts">
+      {% assign briefs = site.posts | where_exp: "post", "post.categories contains 'daily-brief'" %}
+      {% for post in briefs %}
+        <li><a class="post" href="{{ post.url }}"><span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span><span class="post-title">{{ post.title }}</span></a></li>
+      {% else %}
+        <li class="empty">The first Daily Brief will appear here after the next scheduled run.</li>
+      {% endfor %}
+      </ul>
+    </section>
+    <footer class="footer">Subscribe with the RSS link above; new briefs are published as individual archive pages.</footer>
+  </main>
+</body>
+</html>
