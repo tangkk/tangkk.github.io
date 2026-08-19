@@ -1,0 +1,22 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>tangkk Daily Brief</title>
+    <link>https://tangkk.github.io/daily-brief/</link>
+    <description>Daily Brief covering AI, semiconductors, markets, world news, China and science.</description>
+    <language>zh-CN</language>
+    {% assign briefs = site.posts | where_exp: "post", "post.categories contains 'daily-brief'" %}
+    {% for post in briefs limit:30 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>https://tangkk.github.io{{ post.url }}</link>
+      <guid isPermaLink="true">https://tangkk.github.io{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.content | markdownify | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
